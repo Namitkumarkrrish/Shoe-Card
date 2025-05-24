@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Shoe Card</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer">
+
+</head>
+<body>
+  <div class="FullPage">
+    <div class="box">
+    <div class="cart">
+      <button id="cartId" onclick="openCart()">
+        <h4>Go to bag</h4>
+      <i class="fa-solid fa-bag-shopping"></i>
+    </button>
+    </div>
+    <div class="product_image_box">
+      <div class="productImage">
+        
+      </div>
+    </div>
+  <h1>ATHCO Mens Comfort Shoes</h1>
+  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni aperiam quod ut maiores.</p>
+  <div class="price-color">
+    <div class="color-button">
+      <button id="b1" class="cb" onclick="c1()"></button>
+      <button id="b2" class="cb" onclick="c2()"></button>
+      <button id="b3" class="cb" onclick="c3()"></button>
+      <button id="b4" class="cb" onclick="c4()"></button>
+      <button id="b5" class="cb" onclick="c5()"></button>
+      <button id="b6" class="cb" onclick="c6()"></button>
+    </div>
+    <div class="pricebox">
+      <div class="price">
+        $99.9
+      </div>
+    </div>
+  </div>
+  <div class="tax">
+    <p id="selectedSizeDisplay" >Selected Size: None</p>
+      <p id="taxid">inclusive of all Tax</p>
+  </div>
+  <div class="quantity">
+    <div class="quantityNum">
+      <p id="quan">Quantity: </p>
+      <select name="entry" id="num">
+      <option value="1">1</option>
+      <option value="2">2</option>
+      <option value="3">3</option>
+      <option value="4">4</option>
+      <option value="5">5</option>
+    </select>
+    </div>
+    <div class="ratingBox">
+
+    </div>
+  </div>
+  <div class="add">
+    <button class="addtocart" onclick="blurPage();itemAdded();"> Add  to  Cart <i class="fa-solid fa-cart-shopping"></i></button>
+  </div>
+
+  <div class="select-size">
+  <button class="selectsizebtn" onclick="openSizePopup()">Select Size</button>
+</div>
+
+<div id="sizeOverlay" class="overlay">
+  <div id="sizePopup" class="popup">
+    <h3>Select Size</h3>
+    <div class="size-options">
+      <button onclick="selectSize('UK6')">UK6</button>
+      <button onclick="selectSize('UK7')">UK7</button>
+      <button onclick="selectSize('UK8')">UK8</button>
+      <button onclick="selectSize('UK9')">UK9</button>
+      <button onclick="selectSize('UK10')">UK10</button>
+    </div>
+    <button class="done" onclick="closeSizePopup()">Done</button>
+  </div>
+</div>
+
+  </div>
+  </div>
+  <div id="overlay">
+  </div>
+  <div id="popup">
+    <p id="popupmsg">Added to the Cart successfully!</p>
+    <div class="popup-done">
+      <button class="done" onclick="unblur()">Done</button>
+    </div>
+  </div>
+
+  <div class="mycart">
+    <div class="cartimage">
+
+    </div>
+    <h2 class="selectedSize"> Selected Size: None</h2>
+    <div class="amtBox">
+      Amount=$0
+    </div>
+    <div class="backBox">
+      <button id="back" onclick="closeCart()">Back</button>
+      <button id="remove" onclick="itemRemoved()">remove from Cart</button>
+    </div>
+  </div>
+
+  <script src="code.js"></script>
+</body>
+</html>
